@@ -2,9 +2,9 @@
   "name": "todo-list",
   "version": "1.0.0",
   "description": "A Todo List made with Node.js, Express, MongoDB, and Mongoose. Featuring CRUD functionality and follows basic RESTful architectural constraints.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
