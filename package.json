@@ -1,0 +1,28 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "A Todo List made with Node.js, Express, MongoDB, and Mongoose. Featuring CRUD functionality and follows basic RESTful architectural constraints.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidjcrockett/Todo-List.git"
+  },
+  "author": "David C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidjcrockett/Todo-List/issues"
+  },
+  "homepage": "https://github.com/davidjcrockett/Todo-List#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
