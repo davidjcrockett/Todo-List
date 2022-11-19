@@ -22,7 +22,9 @@ mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser : true }, () => {
 });
 
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    TodoSchema.find({}, (err, tasks) => {
+        res.render('index.ejs', { todoTasks: tasks });
+    });
 });
 
 app.post('/', async (req, res) => {
