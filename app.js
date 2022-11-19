@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require('mongoose');
+
+const TodoSchema = require("./models/TodoSchema");
+
 PORT = 3000;
 
 dotenv.config();
