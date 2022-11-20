@@ -52,9 +52,18 @@ app
     })
     .post((req, res) => {
         const id = req.params.id;
-        
+
         TodoSchema.findByIdAndUpdate(id, { content: req.body.content }, err => {
             if (err) return res.send(500, err);
             res.redirect("/");
+        });
+    });
+
+//DELETE
+app.route("/remove/:id").get((req, res) => {
+    const id = req.params.id;
+    TodoTask.findByIdAndRemove(id, err => {
+        if (err) return res.send(500, err);
+        res.redirect("/");
         });
     });
