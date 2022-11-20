@@ -1,0 +1,110 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background: #282F44;
+}
+
+.todo-container {
+color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+padding: 20px;
+transform: translate(-50%, -50%);
+background: rgba(red, green, blue, 0.4);
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.todo-container h1 {
+padding: 20 px;
+font-family: 'Arvo', serif;
+font-size: 4em;
+}
+
+.todo-header input {
+width: 80%;
+border: none;
+border-radius: 5px;
+height: 20px;
+font-family: 'Arvo', serif;
+}
+
+.todo-header button {
+border: none;
+border-radius: 50%;
+padding: 4px;
+font-family: 'Arvo', serif;
+background-color: rgb(51, 212, blue);
+}
+
+.todo-container ul {
+list-style: none;
+}
+
+.todo-list-item {
+padding: 10px;
+margin-top: 10px;
+border: none;
+border-radius: 5px;
+background: rgba(0, 0, 0, 0.3);
+display: flex;
+flex-direction: row;
+font-family: 'Arvo', serif;
+}
+
+.todo-list-item form {
+width: 100%;
+display: flex;
+}
+
+.todo-list-item input {
+flex-grow: 2;
+margin-right: 20px;
+border: none;
+border-radius: 5px; 
+font-family: 'Arvo', serif;   
+}
+
+.todo-list-item button {
+border: none;
+border-radius: 5px;
+cursor: pointer;
+padding: 5px; 
+font-family: 'Arvo', serif;
+}
+
+.todo-list-item .cancel {
+color: white;
+text-decoration: none;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+padding: 5px;
+margin-left: 5px;
+font-family: 'Arvo', serif;
+}
+
+.todo-list-item div {
+flex-grow: 2;
+}
+
+.todo-list-item .edit {
+color : #BAD29F;
+margin-right: 10px;
+cursor:pointer;
+text-decoration: none;
+}
+
+.todo-list-item .remove {
+color : #808A9F;
+margin-right: 5px;
+cursor:pointer;
+text-decoration: none;
+}

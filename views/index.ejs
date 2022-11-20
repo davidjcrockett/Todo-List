@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <head>
     <title>To-Do List</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/e44ce1b030.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="todo-container">
         <h1>To-Do List</h1>
         <form action="/" method="POST" class="todo-header">
             <input type="text" name="content">
-            <button type="submit"><span class="fas fa-plus"></span></button>
+            <button type="submit"><span class="fa-solid fa-plus"></span></button>
         </form>
 
         <ul class="todo-list">
@@ -15,11 +20,11 @@
             <li class="todo-list-item">
 
                 <div class="todo-list-item-name"> <%- details.content %> </div>
-                    <a href="" class="edit">
+                    <a href="/edit/<%= details._id %>" class="edit">
                         <span class="fas fa-edit"></span>
                     </a>
       
-                    <a href="" class="remove">
+                    <a href="/remove/<%= details._id %>" class="remove">
                         <span class="fas fa-times"></span>
                     </a>
             </li>
