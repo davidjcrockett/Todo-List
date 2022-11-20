@@ -21,12 +21,14 @@ mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser : true }, () => {
     app.listen(PORT, () => console.log(`Listening on channel ${PORT}`));
 });
 
+// READ
 app.get('/', (req, res) => {
     TodoSchema.find({}, (err, tasks) => {
         res.render('index.ejs', { todoTasks: tasks });
     });
 });
 
+// CREATE
 app.post('/', async (req, res) => {
     const todoTask = new TodoSchema({
         content: req.body.content
@@ -38,3 +40,21 @@ app.post('/', async (req, res) => {
         res.redirect("/");
     }
 });
+
+// UPDATE
+app
+    .route("/edit/:id")
+    .get((req, res) => {
+        const id = req.params.id;
+        TodoSchema.find({}, (err, tasks) => {
+            res.render("edit.ejs", { todoTasks: tasks, idTask: id });
+        });
+    })
+    .post((req, res) => {
+        const id = req.params.id;
+        
+        TodoSchema.findByIdAndUpdate(id, { content: req.body.content }, err => {
+            if (err) return res.send(500, err);
+            res.redirect("/");
+        });
+    });
