@@ -4,6 +4,7 @@
   "description": "A Todo List made with Node.js, Express, MongoDB, and Mongoose. Featuring CRUD functionality and follows basic RESTful architectural constraints.",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
     "test": "nodemon app.js"
   },
   "repository": {
