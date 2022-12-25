@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const TodoSchema = require("./models/TodoSchema");
 
-PORT = 3000;
+const PORT = process.env.PORT || 3002;
 
 dotenv.config();
 
